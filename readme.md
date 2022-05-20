@@ -8,5 +8,5 @@ Main runnable code
 Character class
 
 ## Character Generator
-Call the Generate() function to generate a random character
+Create an instance and call the generate() function to generate a random character
 

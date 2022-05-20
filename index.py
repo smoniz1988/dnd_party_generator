@@ -1,10 +1,11 @@
 # Description: Hail traveler, a new adventure awaits. We need a party! So let's randomly create one
-
+# Could technically move all this code to a party creator class, but that's overengineering at this point I think
 # import our character generator
 from character_generator import CharacterGenerator
 
 # instantiate a new instance of our character generator
 character_generator = CharacterGenerator()
+
 # array to store all our characters
 dnd_party = []
 # maximum party size
