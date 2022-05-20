@@ -13,7 +13,7 @@ party_size = 5
 # generate our party (loop through 0 to party size) and generate a character
 # append it to our party
 for i in range(party_size):
-    character = character_generator.Generate()
+    character = character_generator.generate()
     dnd_party.append(character)
 
 # generation is complete, lets output the results by looping through our dnd_party

@@ -2,8 +2,9 @@ import random
 
 from character import Character
 
+
 # create a class to handle generation (classes lend themselves to single responsibility. this class generates
-# characters, thats it)
+# characters, that's it)
 class CharacterGenerator:
     # setup various arrays for "RNG" (random number generation) for character generation
     def __init__(self):
@@ -11,12 +12,15 @@ class CharacterGenerator:
 
     names = ['Scott', 'Anoke', 'Nicholas', 'Andy', 'Quinn', 'Carmel', 'Jesse', 'Anthony', 'Michelle', 'Anton', 'Zach',
              'Joseph', 'Dennis']
+
     titles = ['the Great', 'the Powerful', 'the Weak', 'the Shy', 'the Ferocious', 'the Programmer', 'the Beautiful',
-              'the Darkness ', 'the Everlasting Light', 'the Cunning', 'the Gladiator']
-    classes = ['Wizard', 'Rogue', 'Mage', 'Fighter', 'Warlock', 'Paladin', 'Barbarian']
+              'the Darkness ', 'the Everlasting Light', 'the Cunning', 'the Gladiator', 'the Sly', 'the Thief',
+              'the Zealous', 'the Mysterious']
+
+    classes = ['Wizard', 'Rogue', 'Mage', 'Fighter', 'Warlock', 'Paladin', 'Barbarian', 'Cleric', 'Druid']
 
     # create a generate function to randomize names, age, class
-    def Generate(self):
+    def generate(self):
         character = Character()
         character.name = self.names[random.randint(0, len(self.names) - 1)]
         character.name += ", " + self.titles[random.randint(0, len(self.titles) - 1)]
