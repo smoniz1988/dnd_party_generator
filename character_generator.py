@@ -7,12 +7,12 @@ from stat_generator import StatGenerator
 # create a class to handle generation (classes lend themselves to single responsibility. this class generates
 # characters, that's it)
 class CharacterGenerator:
-    # setup various arrays for "RNG" (random number generation) for character generation
     def __init__(self):
         pass
 
     stat_generator = StatGenerator()
 
+    # setup various arrays for "RNG" (random number generation) for character generation
     names = ['Scott', 'Anoke', 'Nicholas', 'Andy', 'Quinn', 'Carmel', 'Jesse', 'Anthony', 'Michelle', 'Anton', 'Zach',
              'Joseph', 'Dennis']
 
