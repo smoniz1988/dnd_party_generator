@@ -7,3 +7,4 @@ class Character:
     level = 1
     age = 0
     dnd_class = ""
+    stats = []

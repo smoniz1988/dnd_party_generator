@@ -6,14 +6,12 @@ from character_generator import CharacterGenerator
 # instantiate a new instance of our character generator
 character_generator = CharacterGenerator()
 
-# array to store all our characters
 dnd_party = []
-# maximum party size
-party_size = 5
+max_party_size = 3
 
 # generate our party (loop through 0 to party size) and generate a character
 # append it to our party
-for i in range(party_size):
+for i in range(max_party_size):
     character = character_generator.generate()
     dnd_party.append(character)
 
@@ -22,4 +20,6 @@ for character in dnd_party:
     print(character.name)
     print(str(character.age) + " Years old")
     print("Level " + str(character.level) + " " + character.dnd_class)
+    for stat in character.stats:
+        print(stat, character.stats[stat])
     print("=================")

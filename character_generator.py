@@ -1,6 +1,7 @@
 import random
 
 from character import Character
+from stat_generator import StatGenerator
 
 
 # create a class to handle generation (classes lend themselves to single responsibility. this class generates
@@ -9,6 +10,8 @@ class CharacterGenerator:
     # setup various arrays for "RNG" (random number generation) for character generation
     def __init__(self):
         pass
+
+    stat_generator = StatGenerator()
 
     names = ['Scott', 'Anoke', 'Nicholas', 'Andy', 'Quinn', 'Carmel', 'Jesse', 'Anthony', 'Michelle', 'Anton', 'Zach',
              'Joseph', 'Dennis']
@@ -26,4 +29,5 @@ class CharacterGenerator:
         character.name += ", " + self.titles[random.randint(0, len(self.titles) - 1)]
         character.age = random.randint(18, 500)
         character.dnd_class = self.classes[random.randint(0, len(self.classes) - 1)]
+        character.stats = self.stat_generator.generate()
         return character
